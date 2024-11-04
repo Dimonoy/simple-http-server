@@ -1,4 +1,7 @@
 #include "main.hpp"
+#include "network/server_director.cpp"
+#include "network/server_builder.cpp"
+#include "network/server.cpp"
 #include <iostream>
 
 const uint16_t BUFFER_SIZE = 256;

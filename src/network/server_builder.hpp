@@ -4,6 +4,7 @@
 #include "server.hpp"
 
 namespace msrv {
+
 class ServerBuilder {
 private:
   Server *server;
@@ -19,6 +20,7 @@ public:
 
   Server *get_server();
 };
+
 } // namespace msrv
 
 #endif // NETWORK_SERVER_BUILDER_HPP
