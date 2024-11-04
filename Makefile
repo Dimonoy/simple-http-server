@@ -1,17 +1,39 @@
-SHELL = /bin/sh
+SHELL := /bin/sh
 
-all: build run
+CC := g++
+LD := g++
 
-build: target/main
+SOURCE := src
+BUILD := build
+BINARY := simple-http-server
 
-run: build
-	./target/main
+MODULES := utils network .
+SOURCE_DIRS := $(addprefix $(SOURCE)/,$(MODULES))
+BUILD_DIRS := $(addprefix $(BUILD)/,$(MODULES))
 
-target:
-	mkdir target
+SOURCE_FILES := $(foreach source_dir,$(SOURCE_DIRS),$(wildcard $(source_dir)/*.cpp))
+OBJECT_FILES := $(patsubst $(SOURCE)/%.cpp,$(BUILD)/%.o,$(SOURCE_FILES))
+INCLUDES := -Iinclude $(addprefix -I,$(SOURCE_DIRS))
+CFLAGS := -ggdb -Wall -Wextra -Wconversion -Wsign-conversion -Weffc++
 
-target/main: target src/main.cpp
-	g++ -ggdb src/main.cpp -o target/main
+vpath %.cpp $(SOURCE_DIRS)
+
+define make-goal
+$1/%.o: %.cpp
+	$(CC) $(CFLAGS) $(INCLUDES) -c $$< -o $$@
+endef
+
+.PHONY: all clean
+
+all: $(BUILD_DIRS) $(BUILD)/$(BINARY)
+
+$(BUILD)/$(BINARY): $(OBJECT_FILES)
+	$(LD) $^ -o $@
+
+$(BUILD_DIRS):
+	@mkdir -p $@
 
 clean:
-	rm -rf target
+	@rm -rf $(BUILD)
+
+$(foreach build_dir,$(BUILD_DIRS),$(eval $(call make-goal,$(build_dir))))

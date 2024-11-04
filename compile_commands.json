@@ -1,0 +1,112 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-ggdb",
+      "-Wall",
+      "-Wextra",
+      "-Wconversion",
+      "-Wsign-conversion",
+      "-Weffc++",
+      "-Iinclude",
+      "-Isrc/utils",
+      "-Isrc/network",
+      "-Isrc/.",
+      "-c",
+      "-o",
+      "build/utils/error.o",
+      "src/utils/error.cpp"
+    ],
+    "directory": "/home/anythen/projects/simple-http-server",
+    "file": "/home/anythen/projects/simple-http-server/src/utils/error.cpp",
+    "output": "/home/anythen/projects/simple-http-server/build/utils/error.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-ggdb",
+      "-Wall",
+      "-Wextra",
+      "-Wconversion",
+      "-Wsign-conversion",
+      "-Weffc++",
+      "-Iinclude",
+      "-Isrc/utils",
+      "-Isrc/network",
+      "-Isrc/.",
+      "-c",
+      "-o",
+      "build/network/server_builder.o",
+      "src/network/server_builder.cpp"
+    ],
+    "directory": "/home/anythen/projects/simple-http-server",
+    "file": "/home/anythen/projects/simple-http-server/src/network/server_builder.cpp",
+    "output": "/home/anythen/projects/simple-http-server/build/network/server_builder.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-ggdb",
+      "-Wall",
+      "-Wextra",
+      "-Wconversion",
+      "-Wsign-conversion",
+      "-Weffc++",
+      "-Iinclude",
+      "-Isrc/utils",
+      "-Isrc/network",
+      "-Isrc/.",
+      "-c",
+      "-o",
+      "build/network/server.o",
+      "src/network/server.cpp"
+    ],
+    "directory": "/home/anythen/projects/simple-http-server",
+    "file": "/home/anythen/projects/simple-http-server/src/network/server.cpp",
+    "output": "/home/anythen/projects/simple-http-server/build/network/server.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-ggdb",
+      "-Wall",
+      "-Wextra",
+      "-Wconversion",
+      "-Wsign-conversion",
+      "-Weffc++",
+      "-Iinclude",
+      "-Isrc/utils",
+      "-Isrc/network",
+      "-Isrc/.",
+      "-c",
+      "-o",
+      "build/network/server_director.o",
+      "src/network/server_director.cpp"
+    ],
+    "directory": "/home/anythen/projects/simple-http-server",
+    "file": "/home/anythen/projects/simple-http-server/src/network/server_director.cpp",
+    "output": "/home/anythen/projects/simple-http-server/build/network/server_director.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-ggdb",
+      "-Wall",
+      "-Wextra",
+      "-Wconversion",
+      "-Wsign-conversion",
+      "-Weffc++",
+      "-Iinclude",
+      "-Isrc/utils",
+      "-Isrc/network",
+      "-Isrc/.",
+      "-c",
+      "-o",
+      "build/./main.o",
+      "src/./main.cpp"
+    ],
+    "directory": "/home/anythen/projects/simple-http-server",
+    "file": "/home/anythen/projects/simple-http-server/src/main.cpp",
+    "output": "/home/anythen/projects/simple-http-server/build/main.o"
+  }
+]
